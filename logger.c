@@ -9,7 +9,7 @@
 #include "pb_encode.h"
 #include "pb_decode.h"
 #include "messages.pb.h"
-
+#include "adc.h"
 /******************************************************
  *                      Macros
  ******************************************************/
@@ -87,7 +87,7 @@ void application_start(void)
 {
     /* Initialize the device */
     WPRINT_APP_INFO(("Starting data logger...\n"));
-
+    init_adc();
     wiced_init();
     wiced_gpio_output_high(WICED_LED1);
     wiced_network_up(WICED_AP_INTERFACE, WICED_USE_INTERNAL_DHCP_SERVER, &ap_ip_settings);

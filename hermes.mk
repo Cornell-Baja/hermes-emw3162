@@ -10,7 +10,7 @@
 
 NAME := App_Logger
 
-$(NAME)_SOURCES := logger.c messages.pb.c
+$(NAME)_SOURCES := logger.c messages.pb.c adc.c
 
 $(NAME)_COMPONENTS := libraries/nanopb
 
